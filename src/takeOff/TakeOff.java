@@ -24,9 +24,7 @@ public class TakeOff {
         int standard = 1013;
         int difference = Math.abs(standard-QNH) * 30;
 
-        int pressureAltitude = (QNH > standard)? altitude - difference : altitude + difference;
-
-        return pressureAltitude;
+        return (QNH > standard)? altitude - difference : altitude + difference;
 
     }
 
@@ -101,9 +99,8 @@ public class TakeOff {
         torUnfactored = (hdWindComp>=0)? torUnfactored - (5 * hdWindComp) : torUnfactored + (15 * hdWindComp);
         todUnfactored = (hdWindComp>=0)? todUnfactored - (5 * hdWindComp) : todUnfactored + (15 * hdWindComp);
 
-        torUnfactored -= asphaltRunway(torUnfactored);
         todUnfactored -= asphaltRunway(torUnfactored);
-
+        torUnfactored -= asphaltRunway(torUnfactored);
 
         int torr = (int)(torUnfactored * 1.1);
         int todr = (int)(todUnfactored * 1.1);
