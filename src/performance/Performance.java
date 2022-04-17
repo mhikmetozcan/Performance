@@ -155,8 +155,8 @@ private final static int[][] ld ={{-25,0,25,50},
         System.out.println("Please enter the temperature:");
         int temp = s.nextInt();
 
-        int lrUnfactored = interpolate(tor,QNH,altitude,temp);
-        int ldUnfactored = interpolate(tod,QNH,altitude,temp);
+        int lrUnfactored = interpolate(lr,QNH,altitude,temp);
+        int ldUnfactored = interpolate(ld,QNH,altitude,temp);
 
         System.out.println("Please enter the runway heading(0-360):");
         int rwy = s.nextInt();
