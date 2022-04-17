@@ -166,8 +166,8 @@ private final static int[][] ld ={{-25,0,25,50},
         int windSpeed = s.nextInt();
         int hdWindComp = hdWindComp(rwy,wind,windSpeed);
 
-        lrUnfactored = (hdWindComp>=0)? lrUnfactored - (5 * hdWindComp) : lrUnfactored + (15 * hdWindComp);
-        ldUnfactored = (hdWindComp>=0)? ldUnfactored - (5 * hdWindComp) : ldUnfactored + (15 * hdWindComp);
+        lrUnfactored = (hdWindComp>=0)? lrUnfactored - (4 * hdWindComp) : lrUnfactored + (13 * hdWindComp);
+        ldUnfactored = (hdWindComp>=0)? ldUnfactored - (4 * hdWindComp) : ldUnfactored + (13 * hdWindComp);
 
         ldUnfactored -= asphaltRunway(lrUnfactored);
         lrUnfactored -= asphaltRunway(lrUnfactored);
